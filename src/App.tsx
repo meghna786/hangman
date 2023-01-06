@@ -19,7 +19,7 @@ function App() {
     (letter) => !wordToGuess.includes(letter)
   );
 
-  const isLoser= WrongGuesses.length >6
+  const isLoser= WrongGuesses.length >=6
   const isWinner=wordToGuess.split('').every(letter=>guessedWord.includes(letter))
 
 
@@ -71,7 +71,7 @@ function App() {
           {isLoser && "Nice Try! Refresh to try again"}
         </div>
       </div>
-      <HangmanDrawing numberOfGuesses={WrongGuesses.length} />
+      <HangmanDrawing numberOfWrongGuesses={WrongGuesses.length} />
       <HangmanWord guessedWord={guessedWord} wordToGuess={wordToGuess}  reveal={isLoser} />
       <div style={{ alignSelf: "stretch" }}>
         <Keyboard
