@@ -1,3 +1,3 @@
-#Hangman 
+### Hangman 
 
 using typescript
